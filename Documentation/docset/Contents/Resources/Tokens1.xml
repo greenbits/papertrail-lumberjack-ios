@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RMPaperTrailLogger.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RMPaperTrailLogger</TokenIdentifier>
+			<Abstract type="html">RMPaperTrailLogger is a custom logger (for CocoaLumberjack) that directs log output to your account on papertrailapp.com. It can log using TCP (TLS or Plain-Text) and UDP. The default is UDP (which is always unencrypted). The logs are sent in a syslog format using RMSyslogFormatter. If you are going to provide a custom formatter, make sure that it formats messages that meets the syslog spec.</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/setHost:</TokenIdentifier>
+			<Abstract type="html">The host to which logs should be sent. Ex. logs.papertrailapp.com</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *host</Declaration>
+			
+			
+			<Anchor>//api/name/host</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/host</TokenIdentifier>
+			<Abstract type="html">The host to which logs should be sent. Ex. logs.papertrailapp.com</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *host</Declaration>
+			
+			
+			<Anchor>//api/name/host</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RMPaperTrailLogger/host</TokenIdentifier>
+			<Abstract type="html">The host to which logs should be sent. Ex. logs.papertrailapp.com</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *host</Declaration>
+			
+			
+			<Anchor>//api/name/host</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/setPort:</TokenIdentifier>
+			<Abstract type="html">The port on host to which we should connect. Ex. 9999</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger port</Declaration>
+			
+			
+			<Anchor>//api/name/port</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/port</TokenIdentifier>
+			<Abstract type="html">The port on host to which we should connect. Ex. 9999</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger port</Declaration>
+			
+			
+			<Anchor>//api/name/port</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RMPaperTrailLogger/port</TokenIdentifier>
+			<Abstract type="html">The port on host to which we should connect. Ex. 9999</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger port</Declaration>
+			
+			
+			<Anchor>//api/name/port</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/setUseTcp:</TokenIdentifier>
+			<Abstract type="html">Specifies whether we should connect via TCP. Default is NO (uses UDP)</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL useTcp</Declaration>
+			
+			
+			<Anchor>//api/name/useTcp</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/useTcp</TokenIdentifier>
+			<Abstract type="html">Specifies whether we should connect via TCP. Default is NO (uses UDP)</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL useTcp</Declaration>
+			
+			
+			<Anchor>//api/name/useTcp</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RMPaperTrailLogger/useTcp</TokenIdentifier>
+			<Abstract type="html">Specifies whether we should connect via TCP. Default is NO (uses UDP)</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL useTcp</Declaration>
+			
+			
+			<Anchor>//api/name/useTcp</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/setUseTLS:</TokenIdentifier>
+			<Abstract type="html">Specifies whether we should use TLS. Default is NO. This parameter applies only to TCP connections.</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL useTLS</Declaration>
+			
+			
+			<Anchor>//api/name/useTLS</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/useTLS</TokenIdentifier>
+			<Abstract type="html">Specifies whether we should use TLS. Default is NO. This parameter applies only to TCP connections.</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL useTLS</Declaration>
+			
+			
+			<Anchor>//api/name/useTLS</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RMPaperTrailLogger/useTLS</TokenIdentifier>
+			<Abstract type="html">Specifies whether we should use TLS. Default is NO. This parameter applies only to TCP connections.</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL useTLS</Declaration>
+			
+			
+			<Anchor>//api/name/useTLS</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RMPaperTrailLogger/sharedInstance</TokenIdentifier>
+			<Abstract type="html">Returns a initialized singleton instance of this logger</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>+ (RMPaperTrailLogger *)sharedInstance</Declaration>
+			
+			
+			<Anchor>//api/name/sharedInstance</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RMPaperTrailLogger/disconnect</TokenIdentifier>
+			<Abstract type="html">Releases network resources (sockets) that were opened. Should be called when we are done with the logger. Any pending writes will be discarded when this method is called.</Abstract>
+			<DeclaredIn>RMPaperTrailLogger.h</DeclaredIn>
+			
+			<Declaration>- (void)disconnect</Declaration>
+			
+			
+			<Anchor>//api/name/disconnect</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

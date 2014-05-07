@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RMSyslogFormatter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RMSyslogFormatter</TokenIdentifier>
+			<Abstract type="html">Formats messages in the form of a syslog message.
+    The syslog format is defined as follows -
+    \&lt;xx\&gt;timestamp machineName programName: message.
+    xx is a log level that depicts the criticality of the error.
+    timestamp - Time at which log was generated. Ex. Oct 11 22:14:15.
+    machineName - typically hostname. We use &apos;vendorId&apos; on iOS.
+    programName - program or component generating log. CFBundleDisplayName (stripped of whitespace) is used
+    message - is the message to be logged.</Abstract>
+			<DeclaredIn>RMSyslogFormatter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>
