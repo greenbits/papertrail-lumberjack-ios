@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, only posts via unsecured UDP sockets.
                        DESC
-  s.homepage         = "http://bitbucket.org/rmonkey/PaperTrailLumberjack"
+  s.homepage         = "http://bitbucket.org/rmonkey/papertraillumberjack"
   s.license          = 'MIT'
   s.author           = { "George Malayil Philip" => "george.malayil@roguemonkey.in" }
   s.source = { :git => "git@bitbucket.org:rmonkey/papertraillumberjack.git" , :tag => s.version.to_s }
