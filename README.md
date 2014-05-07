@@ -1,13 +1,10 @@
 # PaperTrailLumberjack
-
-[![Version](http://cocoapod-badges.herokuapp.com/v/PaperTrailLumberjack/badge.png)](http://cocoadocs.org/docsets/PaperTrailLumberjack)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/PaperTrailLumberjack/badge.png)](http://cocoadocs.org/docsets/PaperTrailLumberjack)
+PaperTrailLumberjack is a CocoaLumberjack logger that helps log statements to your log destination at [papertrailapp](http://papertrailapp.com).
+It supports logging via TCP (TLS and Plain-Text) and UDP. 
 
 ## Usage
 
 To run the example project; clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
