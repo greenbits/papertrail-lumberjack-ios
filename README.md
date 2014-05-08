@@ -8,22 +8,20 @@ The default is UDP (which is always unencrypted).
 To run the example project; clone the repo, and run `pod install` from the Example directory first.
 
 Example UDP logging:
-    RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
-    paperTrailLogger.host = @"destination.papertrailapp.com"; //Your host here
-    paperTrailLogger.port = 9999; //Your port number here
-    
-    [DDLog addLogger:paperTrailLogger];
-    
-    DDLogVerbose(@"Hi PaperTrailApp.com);
 
-Example TCP logging (with TLS):
     RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
     paperTrailLogger.host = @"destination.papertrailapp.com"; //Your host here
     paperTrailLogger.port = 9999; //Your port number here    
-    paperTrailLogger.useTcp = YES; //TLS is on by default on OS X and ignored on iOS
-    
     [DDLog addLogger:paperTrailLogger];
-    
+    DDLogVerbose(@"Hi PaperTrailApp.com);
+
+Example TCP logging (with TLS):
+
+    RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
+    paperTrailLogger.host = @"destination.papertrailapp.com"; //Your host here
+    paperTrailLogger.port = 9999; //Your port number here    
+    paperTrailLogger.useTcp = YES; //TLS is on by default on OS X and ignored on iOS    
+    [DDLog addLogger:paperTrailLogger];
     DDLogVerbose(@"Hi PaperTrailApp.com");
  
 ## Installation
