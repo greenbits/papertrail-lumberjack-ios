@@ -42,6 +42,7 @@
         _sharedInstance = [[self alloc] init];
         RMSyslogFormatter *logFormatter = [[RMSyslogFormatter alloc] init];
         _sharedInstance.logFormatter = logFormatter;
+        _sharedInstance.useTLS = YES;
     });
     
     return _sharedInstance;
@@ -127,30 +128,38 @@
     NSError *error = nil;
     [self.tcpSocket connectToHost:self.host onPort:self.port error:&error];
     if (error != nil) {
+        NSLog(@"Error connecting to host: %@", error);
         return;
     }
     
+#if !TARGET_OS_IPHONE
     if (self.useTLS) {
+        NSLog(@"Starting TLS");
         [self.tcpSocket startTLS:nil];
     }
+#endif
 }
 
 #pragma mark - GCDAsyncDelegate methods
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
 {
+    NSLog(@"Socket did connect to host");
 }
 
 - (void)socketDidSecure:(GCDAsyncSocket *)sock
 {
+    NSLog(@"Socket did secure");
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)error
 {
+    NSLog(@"Socket did disconnect. Error: %@", error);
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
+    NSLog(@"Socket did write data");
 }
 
 @end

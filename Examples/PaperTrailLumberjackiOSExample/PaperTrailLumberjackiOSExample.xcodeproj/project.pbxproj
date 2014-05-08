@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		25E1501E191BFD3B00A6F738 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 25E1501F191BFD3C00A6F738 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				25E15022191BFD4200A6F738 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		131B10FEBCE54FF195D3FD41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 754EB71B279344A592139E48 /* libPods.a */; };
+		25E14FF0191BF75E00A6F738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E14FEF191BF75E00A6F738 /* Foundation.framework */; };
+		25E14FF2191BF75E00A6F738 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E14FF1191BF75E00A6F738 /* CoreGraphics.framework */; };
+		25E14FF4191BF75E00A6F738 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E14FF3191BF75E00A6F738 /* UIKit.framework */; };
+		25E14FFA191BF75E00A6F738 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25E14FF8191BF75E00A6F738 /* InfoPlist.strings */; };
+		25E14FFC191BF75E00A6F738 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E14FFB191BF75E00A6F738 /* main.m */; };
+		25E15000191BF75E00A6F738 /* RMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E14FFF191BF75E00A6F738 /* RMAppDelegate.m */; };
+		25E15002191BF75E00A6F738 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E15001191BF75E00A6F738 /* Images.xcassets */; };
+		25E15009191BF75E00A6F738 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E15008191BF75E00A6F738 /* XCTest.framework */; };
+		25E1500A191BF75E00A6F738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E14FEF191BF75E00A6F738 /* Foundation.framework */; };
+		25E1500B191BF75F00A6F738 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E14FF3191BF75E00A6F738 /* UIKit.framework */; };
+		25E15013191BF75F00A6F738 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25E15011191BF75F00A6F738 /* InfoPlist.strings */; };
+		25E15015191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E15014191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25E1500C191BF75F00A6F738 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25E14FE4191BF75E00A6F738 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25E14FEB191BF75E00A6F738;
+			remoteInfo = PaperTrailLumberjackiOSExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25E14FEC191BF75E00A6F738 /* PaperTrailLumberjackiOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperTrailLumberjackiOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E14FEF191BF75E00A6F738 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		25E14FF1191BF75E00A6F738 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		25E14FF3191BF75E00A6F738 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		25E14FF7191BF75E00A6F738 /* PaperTrailLumberjackiOSExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperTrailLumberjackiOSExample-Info.plist"; sourceTree = "<group>"; };
+		25E14FF9191BF75E00A6F738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		25E14FFB191BF75E00A6F738 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25E14FFD191BF75E00A6F738 /* PaperTrailLumberjackiOSExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaperTrailLumberjackiOSExample-Prefix.pch"; sourceTree = "<group>"; };
+		25E14FFE191BF75E00A6F738 /* RMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMAppDelegate.h; sourceTree = "<group>"; };
+		25E14FFF191BF75E00A6F738 /* RMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMAppDelegate.m; sourceTree = "<group>"; };
+		25E15001191BF75E00A6F738 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		25E15007191BF75E00A6F738 /* PaperTrailLumberjackiOSExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperTrailLumberjackiOSExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E15008191BF75E00A6F738 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		25E15010191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperTrailLumberjackiOSExampleTests-Info.plist"; sourceTree = "<group>"; };
+		25E15012191BF75F00A6F738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		25E15014191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperTrailLumberjackiOSExampleTests.m; sourceTree = "<group>"; };
+		754EB71B279344A592139E48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF580ACE90864D4086CA212A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25E14FE9191BF75E00A6F738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E14FF2191BF75E00A6F738 /* CoreGraphics.framework in Frameworks */,
+				25E14FF4191BF75E00A6F738 /* UIKit.framework in Frameworks */,
+				25E14FF0191BF75E00A6F738 /* Foundation.framework in Frameworks */,
+				131B10FEBCE54FF195D3FD41 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E15004191BF75E00A6F738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E15009191BF75E00A6F738 /* XCTest.framework in Frameworks */,
+				25E1500B191BF75F00A6F738 /* UIKit.framework in Frameworks */,
+				25E1500A191BF75E00A6F738 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25E14FE3191BF75E00A6F738 = {
+			isa = PBXGroup;
+			children = (
+				25E14FF5191BF75E00A6F738 /* PaperTrailLumberjackiOSExample */,
+				25E1500E191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests */,
+				25E14FEE191BF75E00A6F738 /* Frameworks */,
+				25E14FED191BF75E00A6F738 /* Products */,
+				EF580ACE90864D4086CA212A /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		25E14FED191BF75E00A6F738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25E14FEC191BF75E00A6F738 /* PaperTrailLumberjackiOSExample.app */,
+				25E15007191BF75E00A6F738 /* PaperTrailLumberjackiOSExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25E14FEE191BF75E00A6F738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25E14FEF191BF75E00A6F738 /* Foundation.framework */,
+				25E14FF1191BF75E00A6F738 /* CoreGraphics.framework */,
+				25E14FF3191BF75E00A6F738 /* UIKit.framework */,
+				25E15008191BF75E00A6F738 /* XCTest.framework */,
+				754EB71B279344A592139E48 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25E14FF5191BF75E00A6F738 /* PaperTrailLumberjackiOSExample */ = {
+			isa = PBXGroup;
+			children = (
+				25E14FFE191BF75E00A6F738 /* RMAppDelegate.h */,
+				25E14FFF191BF75E00A6F738 /* RMAppDelegate.m */,
+				25E15001191BF75E00A6F738 /* Images.xcassets */,
+				25E14FF6191BF75E00A6F738 /* Supporting Files */,
+			);
+			path = PaperTrailLumberjackiOSExample;
+			sourceTree = "<group>";
+		};
+		25E14FF6191BF75E00A6F738 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				25E14FF7191BF75E00A6F738 /* PaperTrailLumberjackiOSExample-Info.plist */,
+				25E14FF8191BF75E00A6F738 /* InfoPlist.strings */,
+				25E14FFB191BF75E00A6F738 /* main.m */,
+				25E14FFD191BF75E00A6F738 /* PaperTrailLumberjackiOSExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25E1500E191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				25E15014191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests.m */,
+				25E1500F191BF75F00A6F738 /* Supporting Files */,
+			);
+			path = PaperTrailLumberjackiOSExampleTests;
+			sourceTree = "<group>";
+		};
+		25E1500F191BF75F00A6F738 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				25E15010191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests-Info.plist */,
+				25E15011191BF75F00A6F738 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25E14FEB191BF75E00A6F738 /* PaperTrailLumberjackiOSExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25E15018191BF75F00A6F738 /* Build configuration list for PBXNativeTarget "PaperTrailLumberjackiOSExample" */;
+			buildPhases = (
+				AEA8D74221F645D6B2D05180 /* Check Pods Manifest.lock */,
+				25E14FE8191BF75E00A6F738 /* Sources */,
+				25E14FE9191BF75E00A6F738 /* Frameworks */,
+				25E14FEA191BF75E00A6F738 /* Resources */,
+				62F6F07A53454515ACFEA610 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaperTrailLumberjackiOSExample;
+			productName = PaperTrailLumberjackiOSExample;
+			productReference = 25E14FEC191BF75E00A6F738 /* PaperTrailLumberjackiOSExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25E15006191BF75E00A6F738 /* PaperTrailLumberjackiOSExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25E1501B191BF75F00A6F738 /* Build configuration list for PBXNativeTarget "PaperTrailLumberjackiOSExampleTests" */;
+			buildPhases = (
+				25E15003191BF75E00A6F738 /* Sources */,
+				25E15004191BF75E00A6F738 /* Frameworks */,
+				25E15005191BF75E00A6F738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25E1500D191BF75F00A6F738 /* PBXTargetDependency */,
+			);
+			name = PaperTrailLumberjackiOSExampleTests;
+			productName = PaperTrailLumberjackiOSExampleTests;
+			productReference = 25E15007191BF75E00A6F738 /* PaperTrailLumberjackiOSExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25E14FE4191BF75E00A6F738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Rogue Monkey Technologies & Systems Private Limited";
+				TargetAttributes = {
+					25E15006191BF75E00A6F738 = {
+						TestTargetID = 25E14FEB191BF75E00A6F738;
+					};
+				};
+			};
+			buildConfigurationList = 25E14FE7191BF75E00A6F738 /* Build configuration list for PBXProject "PaperTrailLumberjackiOSExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 25E14FE3191BF75E00A6F738;
+			productRefGroup = 25E14FED191BF75E00A6F738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25E14FEB191BF75E00A6F738 /* PaperTrailLumberjackiOSExample */,
+				25E15006191BF75E00A6F738 /* PaperTrailLumberjackiOSExampleTests */,
+				25E1501E191BFD3B00A6F738 /* Documentation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25E14FEA191BF75E00A6F738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E14FFA191BF75E00A6F738 /* InfoPlist.strings in Resources */,
+				25E15002191BF75E00A6F738 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E15005191BF75E00A6F738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E15013191BF75F00A6F738 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25E15022191BFD4200A6F738 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Rogue Monkey Technologies & Systems Private Limited\";\ncompanyID=\"in.roguemonkey\";\ncompanyURL=\"http://roguemonkey.in\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"/Volumes/My Stuff/Programs/iPhone/PaperTrailLumberjack/Documentation\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--output \"${outputPath}/\" \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore \"*.m\" \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}/../../Classes\"\n";
+		};
+		62F6F07A53454515ACFEA610 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEA8D74221F645D6B2D05180 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25E14FE8191BF75E00A6F738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E14FFC191BF75E00A6F738 /* main.m in Sources */,
+				25E15000191BF75E00A6F738 /* RMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25E15003191BF75E00A6F738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E15015191BF75F00A6F738 /* PaperTrailLumberjackiOSExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25E1500D191BF75F00A6F738 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25E14FEB191BF75E00A6F738 /* PaperTrailLumberjackiOSExample */;
+			targetProxy = 25E1500C191BF75F00A6F738 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		25E14FF8191BF75E00A6F738 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E14FF9191BF75E00A6F738 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		25E15011191BF75F00A6F738 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E15012191BF75F00A6F738 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25E15016191BF75F00A6F738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25E15017191BF75F00A6F738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25E15019191BF75F00A6F738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF580ACE90864D4086CA212A /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaperTrailLumberjackiOSExample/PaperTrailLumberjackiOSExample-Prefix.pch";
+				INFOPLIST_FILE = "PaperTrailLumberjackiOSExample/PaperTrailLumberjackiOSExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		25E1501A191BF75F00A6F738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF580ACE90864D4086CA212A /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaperTrailLumberjackiOSExample/PaperTrailLumberjackiOSExample-Prefix.pch";
+				INFOPLIST_FILE = "PaperTrailLumberjackiOSExample/PaperTrailLumberjackiOSExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		25E1501C191BF75F00A6F738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PaperTrailLumberjackiOSExample.app/PaperTrailLumberjackiOSExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaperTrailLumberjackiOSExample/PaperTrailLumberjackiOSExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SRCROOT}/Pods/Headers/**",
+				);
+				INFOPLIST_FILE = "PaperTrailLumberjackiOSExampleTests/PaperTrailLumberjackiOSExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		25E1501D191BF75F00A6F738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PaperTrailLumberjackiOSExample.app/PaperTrailLumberjackiOSExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaperTrailLumberjackiOSExample/PaperTrailLumberjackiOSExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SRCROOT}/Pods/Headers/**",
+				);
+				INFOPLIST_FILE = "PaperTrailLumberjackiOSExampleTests/PaperTrailLumberjackiOSExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		25E15020191BFD3C00A6F738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		25E15021191BFD3C00A6F738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25E14FE7191BF75E00A6F738 /* Build configuration list for PBXProject "PaperTrailLumberjackiOSExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E15016191BF75F00A6F738 /* Debug */,
+				25E15017191BF75F00A6F738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E15018191BF75F00A6F738 /* Build configuration list for PBXNativeTarget "PaperTrailLumberjackiOSExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E15019191BF75F00A6F738 /* Debug */,
+				25E1501A191BF75F00A6F738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E1501B191BF75F00A6F738 /* Build configuration list for PBXNativeTarget "PaperTrailLumberjackiOSExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E1501C191BF75F00A6F738 /* Debug */,
+				25E1501D191BF75F00A6F738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E1501F191BFD3C00A6F738 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E15020191BFD3C00A6F738 /* Debug */,
+				25E15021191BFD3C00A6F738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25E14FE4191BF75E00A6F738 /* Project object */;
+}

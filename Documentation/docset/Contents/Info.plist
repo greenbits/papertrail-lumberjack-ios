@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleIdentifier</key>
-	<string>in.roguemonkey.PaperTrailLumberjackExample</string>
+	<string>in.roguemonkey.PaperTrailLumberjackiOSExample</string>
 	<key>CFBundleName</key>
-	<string>PaperTrailLumberjackExample Documentation</string>
+	<string>PaperTrailLumberjackiOSExample Documentation</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -17,7 +17,7 @@
 	
 	
 	<key>DocSetFeedName</key>
-	<string>PaperTrailLumberjackExample Documentation</string>
+	<string>PaperTrailLumberjackiOSExample Documentation</string>
 	
 	<key>DocSetMinimumXcodeVersion</key>
 	<string>3.0</string>

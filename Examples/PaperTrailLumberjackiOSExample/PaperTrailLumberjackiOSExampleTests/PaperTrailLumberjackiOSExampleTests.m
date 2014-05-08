@@ -1,8 +1,8 @@
 //
-//  PaperTrailLumberjackExampleTests.m
-//  PaperTrailLumberjackExampleTests
+//  PaperTrailLumberjackiOSExampleTests.m
+//  PaperTrailLumberjackiOSExampleTests
 //
-//  Created by Malayil Philip George on 5/1/14.
+//  Created by Malayil Philip George on 5/8/14.
 //  Copyright (c) 2014 Rogue Monkey Technologies & Systems Private Limited. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 
 const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
-@interface PaperTrailLumberjackExampleTests : XCTestCase {
+@interface PaperTrailLumberjackiOSExampleTests : XCTestCase {
     RMPaperTrailLogger *_paperTrailLogger;
 }
 
@@ -24,7 +24,7 @@ const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @end
 
-@implementation PaperTrailLumberjackExampleTests
+@implementation PaperTrailLumberjackiOSExampleTests
 
 @synthesize paperTrailLogger = _paperTrailLogger;
 
@@ -40,11 +40,11 @@ const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     //Add RMPaperTrailLogger
     RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
-    paperTrailLogger.host = @"localhost"; //Enter your hostname here ex. logs.papertrailapp.com
-    paperTrailLogger.port = 9999; //Enter port number here
+    paperTrailLogger.host = @"logs.papertrailapp.com"; //Enter your hostname here ex. logs.papertrailapp.com
+    paperTrailLogger.port = 13619; //Enter port number here
     self.paperTrailLogger = paperTrailLogger;
     [DDLog addLogger:paperTrailLogger];
-
+    
 }
 
 - (void)tearDown
@@ -82,7 +82,6 @@ const int ddLogLevel = LOG_LEVEL_VERBOSE;
 -(void) testTcpSSLLogging
 {
     self.paperTrailLogger.useTcp = YES;
-    self.paperTrailLogger.useTLS = YES;
     
     DDLogVerbose(@"");
     DDLogVerbose(@"Verbose Logging");

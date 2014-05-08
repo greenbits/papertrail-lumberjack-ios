@@ -9,6 +9,8 @@
 
 #import "RMSyslogFormatter.h"
 
+static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
+
 @implementation RMSyslogFormatter
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
@@ -35,24 +37,43 @@
     NSString *timestamp = [dateFormatter stringFromDate:logMessage->timestamp];
     
     //Get vendor id
-    NSString *vendorId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSString *machineName = [self machineName];
     
-    //Get app name
-    NSString *appName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
-    if (appName == nil) {
-        appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-    }
+    //Get program name
+    NSString *programName = [self programName];
     
-    //Remove all whitespace characters from appname
-    if (appName != nil) {
-        NSArray *components = [appName componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        appName = [components componentsJoinedByString:@""];
-    }
-    
-    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %x %@@%s@%i \"%@\"", logLevel, timestamp, vendorId, appName, logMessage->machThreadID, file, logMessage->function, logMessage->lineNumber, msg];
+    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %x %@@%s@%i \"%@\"", logLevel, timestamp, machineName, programName, logMessage->machThreadID, file, logMessage->function, logMessage->lineNumber, msg];
     
     return log;
 }
 
+-(NSString *) machineName
+{
+    //We will generate and use a app-specific UUID to maintain user privacy.
+    NSString *uuid = [[NSUserDefaults standardUserDefaults] stringForKey:RMAppUUIDKey];
+    if (uuid == nil) {
+        uuid = [[NSUUID UUID] UUIDString];
+        [[NSUserDefaults standardUserDefaults] setObject:uuid forKey:RMAppUUIDKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    return uuid;
+}
+
+-(NSString *) programName
+{
+    NSString *programName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
+    if (programName == nil) {
+        programName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+    }
+    
+    //Remove all whitespace characters from appname
+    if (programName != nil) {
+        NSArray *components = [programName componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        programName = [components componentsJoinedByString:@""];
+    }
+    
+    return programName;
+}
 
 @end

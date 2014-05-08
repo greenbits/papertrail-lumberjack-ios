@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
-Path: /Users/georgemp/Library/Developer/Shared/Documentation/DocSets/in.roguemonkey.PaperTrailLumberjackExample.docset
-Time: 2014-05-07 12:17:06 +0000
+Path: /Users/georgemp/Library/Developer/Shared/Documentation/DocSets/in.roguemonkey.PaperTrailLumberjackiOSExample.docset
+Time: 2014-05-08 18:00:30 +0000
