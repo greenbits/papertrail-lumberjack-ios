@@ -10,15 +10,15 @@ PODS:
     - CocoaLumberjack
 
 DEPENDENCIES:
-  - PaperTrailLumberjack (from `../`)
+  - PaperTrailLumberjack (from `../..`)
 
 EXTERNAL SOURCES:
   PaperTrailLumberjack:
-    :path: ../
+    :path: ../..
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a3b6de9958961578b36eabb8e921efd95b13d80c
   CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
-  PaperTrailLumberjack: da28204cdd8afb5a67c1a06e544efcec97d68fe3
+  PaperTrailLumberjack: d1bd95b3d262c9cb28663efc93efdbd0f01dee2a
 
 COCOAPODS: 0.32.1
