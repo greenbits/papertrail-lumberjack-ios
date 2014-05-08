@@ -8,8 +8,7 @@ A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, o
   s.homepage         = "http://bitbucket.org/rmonkey/papertraillumberjack"
   s.license          = 'MIT'
   s.author           = { "George Malayil Philip" => "george.malayil@roguemonkey.in" }
-#  s.source = { :git => "git@bitbucket.org:rmonkey/papertraillumberjack.git" , :tag => s.version.to_s }
-  s.source = {:path => "/Volumes/My Stuff/Programs/iPhone/PaperTrailLumberjack"}
+  s.source = { :git => "https://bitbucket.org/rmonkey/papertraillumberjack.git" , :tag => s.version.to_s }
   s.requires_arc = true
   s.ios.platform = :ios, '5.0'
   s.ios.deployment_target = '5.0'
