@@ -33,7 +33,8 @@ it simply add the following line to your Podfile:
 
 ## Author
 
-George Malayil-Philip, george.malayil@roguemonkey.in
+George Malayil-Philip, [george.malayil@roguemonkey.in](mailto://george.malayil@roguemonkey.in)
+[Rogue Monkey Technologies & Systems Private Limited](http://www.roguemonkey.in)
 
 ## License
 
