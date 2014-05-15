@@ -23,7 +23,13 @@ Example TCP logging (with TLS):
     paperTrailLogger.useTcp = YES; //TLS is on by default on OS X and ignored on iOS    
     [DDLog addLogger:paperTrailLogger];
     DDLogVerbose(@"Hi PaperTrailApp.com");
- 
+
+Your log messages are automatically formatted to meet the syslog specs, which, typically haves a machine name and program name pre-fixed to the log, along with a timestamp. In order to maintain user privacy, PaperTrailLumberjack uses a unique UUID per device (the UUID is random and reset each time the application is deleted and installed again). The program name is the bundle name stripped of whitespaces.
+
+Sample log output:
+
+    May 08 23:20:59 0A3F9C64-D271-452F-AD6E-8052BBD3F789 PaperTrailLumberjackiOSExample: 60b PaperTrailLumberjackiOSExampleTests@testUdpLogging@62 "Hi PaperTrailApp.com"
+
 ## Installation
 
 PaperTrailLumberjack is available through [CocoaPods](http://cocoapods.org), to install
