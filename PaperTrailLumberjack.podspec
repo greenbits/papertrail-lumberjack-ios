@@ -18,6 +18,6 @@ A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, o
 
   s.source_files = 'Classes'
 
-  s.dependency 'CocoaLumberjack', '~> 2.0'
+  s.dependency 'CocoaLumberjack', '2.0.0-beta3'
   s.dependency 'CocoaAsyncSocket'
 end
