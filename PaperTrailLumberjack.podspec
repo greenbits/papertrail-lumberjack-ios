@@ -13,8 +13,6 @@ A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, o
   s.requires_arc = true
   s.ios.platform = :ios, '5.0'
   s.ios.deployment_target = '5.0'
-  s.osx.platform = :osx, '10.7'
-  s.osx.deployment_target = '10.7'
 
   s.source_files = 'Classes'
 
