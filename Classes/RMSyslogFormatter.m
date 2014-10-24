@@ -49,31 +49,15 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
 
 -(NSString *) machineName
 {
-    //We will generate and use a app-specific UUID to maintain user privacy.
-    NSString *uuid = [[NSUserDefaults standardUserDefaults] stringForKey:RMAppUUIDKey];
-    if (uuid == nil) {
-        uuid = [[NSUUID UUID] UUIDString];
-        [[NSUserDefaults standardUserDefaults] setObject:uuid forKey:RMAppUUIDKey];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-    
-    return uuid;
+    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:kCFBundleExecutableKey];
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:kCFBundleVersionKey];
+
+    return [@[appName, appVersion] componentsJoinedByString:@"-"];
 }
 
 -(NSString *) programName
 {
-    NSString *programName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
-    if (programName == nil) {
-        programName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-    }
-    
-    //Remove all whitespace characters from appname
-    if (programName != nil) {
-        NSArray *components = [programName componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        programName = [components componentsJoinedByString:@""];
-    }
-    
-    return programName;
+    return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 }
 
 @end
