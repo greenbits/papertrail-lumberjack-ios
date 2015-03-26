@@ -66,13 +66,13 @@
     if (self.host == nil || self.host.length == 0 || self.port == 0)
         return;
     
-    NSString *logMsg = logMessage->logMsg;
+    NSString *logMsg = logMessage.message;
     if (logMsg == nil) {
         logMsg = @"";
     }
     
-    if (formatter) {
-        logMsg = [formatter formatLogMessage:logMessage];
+    if (self.logFormatter) {
+        logMsg = [self.logFormatter formatLogMessage:logMessage];
     }
     
     //Check if last character is newLine

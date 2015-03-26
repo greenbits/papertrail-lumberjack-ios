@@ -15,10 +15,10 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
-    NSString *msg = logMessage->logMsg;
+    NSString *msg = logMessage.message;
     
     NSString *logLevel;
-    switch (logMessage->logFlag)
+    switch (logMessage.flag)
     {
         case LOG_FLAG_ERROR     : logLevel = @"11"; break;
         case LOG_FLAG_WARN      : logLevel = @"12"; break;
@@ -29,12 +29,12 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
     }
     
     //Also display the file the logging occurred in to ease later debugging
-    NSString *file = [[[NSString stringWithUTF8String:logMessage->file] lastPathComponent] stringByDeletingPathExtension];
+    NSString *file = [[logMessage.file lastPathComponent] stringByDeletingPathExtension];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MMM dd HH:mm:ss"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
-    NSString *timestamp = [dateFormatter stringFromDate:logMessage->timestamp];
+    NSString *timestamp = [dateFormatter stringFromDate:logMessage.timestamp];
     
     //Get vendor id
     NSString *machineName = [self machineName];
@@ -42,7 +42,7 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
     //Get program name
     NSString *programName = [self programName];
     
-    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %x %@@%s@%i \"%@\"", logLevel, timestamp, machineName, programName, logMessage->machThreadID, file, logMessage->function, logMessage->lineNumber, msg];
+    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %x %@@%s@%i \"%@\"", logLevel, timestamp, machineName, programName, logMessage.threadID, file, logMessage.function, logMessage.line, msg];
     
     return log;
 }
