@@ -20,11 +20,11 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
     NSString *logLevel;
     switch (logMessage.flag)
     {
-        case LOG_FLAG_ERROR     : logLevel = @"11"; break;
-        case LOG_FLAG_WARN      : logLevel = @"12"; break;
-        case LOG_FLAG_INFO      : logLevel = @"14"; break;
-        case LOG_FLAG_DEBUG     : logLevel = @"15"; break;
-        case LOG_FLAG_VERBOSE   : logLevel = @"15" ; break;
+        case DDLogFlagError     : logLevel = @"11"; break;
+        case DDLogFlagWarning   : logLevel = @"12"; break;
+        case DDLogFlagInfo      : logLevel = @"14"; break;
+        case DDLogFlagDebug     : logLevel = @"15"; break;
+        case DDLogFlagVerbose   : logLevel = @"15"; break;
         default                 : logLevel = @"15"; break;
     }
     
@@ -42,15 +42,15 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
     //Get program name
     NSString *programName = [self programName];
     
-    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %x %@@%s@%i \"%@\"", logLevel, timestamp, machineName, programName, logMessage.threadID, file, logMessage.function, logMessage.line, msg];
+    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %@ %@@%@@%i \"%@\"", logLevel, timestamp, machineName, programName, logMessage.threadID, file, logMessage.function, logMessage.line, msg];
     
     return log;
 }
 
 -(NSString *) machineName
 {
-    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:kCFBundleExecutableKey];
-    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:kCFBundleVersionKey];
+    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleVersionKey];
 
     return [@[appName, appVersion] componentsJoinedByString:@"-"];
 }

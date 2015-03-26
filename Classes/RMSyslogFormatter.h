@@ -8,7 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 /**
  Formats messages in the form of a syslog message.
