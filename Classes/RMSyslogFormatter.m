@@ -42,7 +42,7 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
     //Get program name
     NSString *programName = [self programName];
     
-    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %@ %@@%@@%i \"%@\"", logLevel, timestamp, machineName, programName, logMessage.threadID, file, logMessage.function, logMessage.line, msg];
+    NSString *log = [NSString stringWithFormat:@"<%@>%@ %@ %@: %@ %@@%@@%lu \"%@\"", logLevel, timestamp, machineName, programName, logMessage.threadID, file, logMessage.function, (unsigned long)logMessage.line, msg];
     
     return log;
 }
