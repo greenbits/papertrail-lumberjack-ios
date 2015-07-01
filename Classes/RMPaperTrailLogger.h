@@ -41,6 +41,11 @@
 @property (nonatomic, assign) BOOL useTLS;
 
 /**
+ Specifies whether the logger should emit informational NSLogs
+ */
+@property (nonatomic, assign) BOOL debug;
+
+/**
  Returns a initialized singleton instance of this logger
  */
 +(RMPaperTrailLogger *) sharedInstance;

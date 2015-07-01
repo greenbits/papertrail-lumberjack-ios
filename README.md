@@ -1,7 +1,7 @@
 # PaperTrailLumberjack
 PaperTrailLumberjack is a CocoaLumberjack logger that helps log statements to your log destination at [papertrailapp](http://papertrailapp.com).
-It can log using TCP and UDP. On OS X, TLS is supported on TCP Connections, while, on iOS, TCP connections are currently only plain-text. 
-The default is UDP (which is always unencrypted). 
+It can log using TCP and UDP. On OS X, TLS is supported on TCP Connections, while, on iOS, TCP connections are currently only plain-text.
+The default is UDP (which is always unencrypted).
 
 ## Usage
 
@@ -11,7 +11,8 @@ Example UDP logging:
 
     RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
     paperTrailLogger.host = @"destination.papertrailapp.com"; //Your host here
-    paperTrailLogger.port = 9999; //Your port number here    
+    paperTrailLogger.port = 9999; //Your port number here
+    paperTrailLogger.debug = NO; //Silences some NSLogging
     [DDLog addLogger:paperTrailLogger];
     DDLogVerbose(@"Hi PaperTrailApp.com);
 
@@ -19,8 +20,9 @@ Example TCP logging (with TLS):
 
     RMPaperTrailLogger *paperTrailLogger = [RMPaperTrailLogger sharedInstance];
     paperTrailLogger.host = @"destination.papertrailapp.com"; //Your host here
-    paperTrailLogger.port = 9999; //Your port number here    
-    paperTrailLogger.useTcp = YES; //TLS is on by default on OS X and ignored on iOS    
+    paperTrailLogger.port = 9999; //Your port number here
+    paperTrailLogger.debug = NO; //Silences some NSLogging
+    paperTrailLogger.useTcp = YES; //TLS is on by default on OS X and ignored on iOS
     [DDLog addLogger:paperTrailLogger];
     DDLogVerbose(@"Hi PaperTrailApp.com");
 
@@ -46,4 +48,3 @@ George Malayil-Philip, [george.malayil@roguemonkey.in](mailto:george.malayil@rog
 ## License
 
 PaperTrailLumberjack is available under the MIT license. See the LICENSE file for more info.
-
