@@ -133,14 +133,12 @@
         return;
     }
 
-#if !TARGET_OS_IPHONE
     if (self.useTLS) {
         if (self.debug) {
             NSLog(@"Starting TLS");
         }
         [self.tcpSocket startTLS:nil];
     }
-#endif
 }
 
 #pragma mark - GCDAsyncDelegate methods
