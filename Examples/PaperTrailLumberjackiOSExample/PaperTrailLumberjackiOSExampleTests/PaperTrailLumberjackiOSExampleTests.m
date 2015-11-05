@@ -8,13 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-#import <DDLog.h>
-#import <DDASLLogger.h>
-#import <DDTTYLogger.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #import "RMPaperTrailLogger.h"
 
-const int ddLogLevel = LOG_LEVEL_VERBOSE;
+const int ddLogLevel = DDLogLevelVerbose;
 
 @interface PaperTrailLumberjackiOSExampleTests : XCTestCase {
     RMPaperTrailLogger *_paperTrailLogger;

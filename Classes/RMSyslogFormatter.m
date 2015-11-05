@@ -32,7 +32,9 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
     NSString *file = [[logMessage.file lastPathComponent] stringByDeletingPathExtension];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM dd HH:mm:ss"];
+    NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+    [dateFormatter setLocale:enUSPOSIXLocale];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *timestamp = [dateFormatter stringFromDate:logMessage.timestamp];
     
