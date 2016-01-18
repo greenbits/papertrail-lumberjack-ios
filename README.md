@@ -37,7 +37,7 @@ Sample log output:
 PaperTrailLumberjack is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
 
-    pod 'PaperTrailLumberjack'
+    pod 'PaperTrailLumberjack', :git => 'https://github.com/greenbits/papertrail-lumberjack-ios.git'
 
 ## Author
 
