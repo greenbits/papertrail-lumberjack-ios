@@ -9,9 +9,9 @@ A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, o
   s.license          = 'MIT'
   s.author           = { "George Malayil Philip" => "george.malayil@roguemonkey.in" }
   s.source = { :git => "https://github.com/greenbits/papertrail-lumberjack-ios.git" , :tag => s.version.to_s }
+  s.platform         = :ios
 
   s.requires_arc = true
-  s.ios.platform = :ios, '5.0'
   s.ios.deployment_target = '5.0'
 
   s.source_files = 'Classes'
