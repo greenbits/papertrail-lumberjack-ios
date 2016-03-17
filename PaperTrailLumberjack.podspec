@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PaperTrailLumberjack"
-  s.version          = "1.0.3"
+  s.version          = "2.0.0"
   s.summary          = "A CocoaLumberjack logger to post logs to papertrailapp.com"
   s.description      = <<-DESC
 A CocoaLumberjack logger to post log messages to papertrailapp.com. Currently, only posts via unsecured UDP sockets.
