@@ -33,8 +33,7 @@
 @synthesize tcpSocket = _tcpSocket;
 @synthesize udpSocket = _udpSocket;
 
-+(RMPaperTrailLogger *) sharedInstance
-{
++ (RMPaperTrailLogger *) sharedInstance {
     static dispatch_once_t pred = 0;
     static RMPaperTrailLogger *_sharedInstance = nil;
 
@@ -49,8 +48,7 @@
     return _sharedInstance;
 }
 
--(void) disconnect
-{
+- (void)disconnect {
     @synchronized(self) {
         if (self.tcpSocket != nil) {
             [self.tcpSocket disconnect];
@@ -62,10 +60,10 @@
     }
 }
 
--(void) logMessage:(DDLogMessage *)logMessage
-{
-    if (self.host == nil || self.host.length == 0 || self.port == 0)
+- (void)logMessage:(DDLogMessage *)logMessage {
+    if (self.host == nil || self.host.length == 0 || self.port == 0) {
         return;
+    }
 
     NSString *logMsg = logMessage.message;
     if (logMsg == nil) {
@@ -76,7 +74,7 @@
         logMsg = [_logFormatter formatLogMessage:logMessage];
     }
 
-    //Check if last character is newLine
+    // Check if last character is newLine
     unichar lastChar = [logMsg characterAtIndex:logMsg.length-1];
     if (![[NSCharacterSet newlineCharacterSet] characterIsMember:lastChar]) {
         logMsg = [NSString stringWithFormat:@"%@\n", logMsg];
@@ -89,10 +87,10 @@
     }
 }
 
--(void) sendLogOverUdp:(NSString *) message
-{
-    if (message == nil || message.length == 0)
+- (void)sendLogOverUdp:(NSString *) message {
+    if (message == nil || message.length == 0) {
         return;
+    }
 
     if (self.udpSocket == nil) {
         GCDAsyncUdpSocket *udpSocket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
@@ -104,10 +102,10 @@
     [self.udpSocket sendData:logData toHost:self.host port:self.port withTimeout:-1 tag:1];
 }
 
--(void) sendLogOverTcp:(NSString *) message
-{
-    if (message == nil || message.length == 0)
+- (void)sendLogOverTcp:(NSString *) message {
+    if (message == nil || message.length == 0) {
         return;
+    }
 
     @synchronized(self) {
         if (self.tcpSocket == nil) {
@@ -121,10 +119,10 @@
     [self.tcpSocket writeData:logData withTimeout:-1 tag:1];
 }
 
--(void) connectTcpSocket
-{
-    if (self.host == nil || self.port == 0)
+- (void)connectTcpSocket {
+    if (self.host == nil || self.port == 0) {
         return;
+    }
 
     NSError *error = nil;
     [self.tcpSocket connectToHost:self.host onPort:self.port error:&error];
@@ -141,29 +139,39 @@
     }
 }
 
+- (void)setMachineName:(NSString *)machineName {
+    _machineName = [machineName copy];
+
+    RMSyslogFormatter *formatter = (RMSyslogFormatter *)_logFormatter;
+    formatter.machineName = _machineName;
+}
+
+- (void)setProgramName:(NSString *)programName {
+    _programName = [programName copy];
+
+    RMSyslogFormatter *formatter = (RMSyslogFormatter *)_logFormatter;
+    formatter.programName = _programName;
+}
+
 #pragma mark - GCDAsyncDelegate methods
 
-- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
-{
+- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port {
     if (self.debug) {
         NSLog(@"Socket did connect to host");
     }
 }
 
-- (void)socketDidSecure:(GCDAsyncSocket *)sock
-{
+- (void)socketDidSecure:(GCDAsyncSocket *)sock {
     if (self.debug) {
         NSLog(@"Socket did secure");
     }
 }
 
-- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)error
-{
+- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)error {
     NSLog(@"Socket did disconnect. Error: %@", error);
 }
 
-- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
-{
+- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
     if (self.debug) {
         NSLog(@"Socket did write data");
     }

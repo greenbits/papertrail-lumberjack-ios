@@ -18,6 +18,8 @@
     NSUInteger _port;
     BOOL _useTcp;
     BOOL _useTLS;
+    NSString *_machineName;
+    NSString *_programName;
 }
 
 /**
@@ -46,13 +48,23 @@
 @property (nonatomic, assign) BOOL debug;
 
 /**
+ Specifies a custom machine name for the logs. Defaults to vendor identifier UUID.
+ */
+@property (nonatomic, copy) NSString *machineName;
+
+/**
+ Specifies a custom program name for the logs. Defaults to "AppName-AppVersion".
+ */
+@property (nonatomic, copy) NSString *programName;
+
+/**
  Returns a initialized singleton instance of this logger
  */
-+(RMPaperTrailLogger *) sharedInstance;
++ (RMPaperTrailLogger *)sharedInstance;
 
 /**
  Releases network resources (sockets) that were opened. Should be called when we are done with the logger. Any pending writes will be discarded when this method is called.
  */
--(void) disconnect;
+- (void)disconnect;
 
 @end
