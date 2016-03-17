@@ -63,10 +63,11 @@ static NSString * const RMAppUUIDKey = @"RMAppUUIDKey";
         return _programName;
     }
 
-    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleExecutableKey];
-    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:(__bridge NSString *)kCFBundleVersionKey];
+    NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleExecutable"];
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSString *build = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 
-    return [@[appName, appVersion] componentsJoinedByString:@"-"];
+    return [@[appName, version, build] componentsJoinedByString:@"-"];
 }
 
 - (void)setProgramName:(NSString *)programName {
