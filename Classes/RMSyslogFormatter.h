@@ -22,4 +22,7 @@
  */
 @interface RMSyslogFormatter : NSObject <DDLogFormatter>
 
+@property (nonatomic, copy) NSString *programName;
+@property (nonatomic, copy) NSString *machineName;
+
 @end
