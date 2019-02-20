@@ -41,11 +41,6 @@
 @property (nonatomic, assign) BOOL debug;
 
 /**
- Specifies the API key for remote logging service.
- */
-@property (nonatomic, copy) NSString *apiKey;
-
-/**
  Specifies a custom machine name for the logs. Defaults to vendor identifier UUID.
  */
 @property (nonatomic, copy) NSString *machineName;
