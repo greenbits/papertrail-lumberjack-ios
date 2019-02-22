@@ -33,11 +33,13 @@
 
     NSMutableDictionary *json = [@{} mutableCopy];
 
-    NSString *message = [NSString stringWithFormat:@"<%@>%@: %@ %@@%@@%lu \"%@\"", logLevel,
-                         timestamp, logMessage.threadID, file, logMessage.function,
-                         (unsigned long)logMessage.line, msg];
+    NSString *function = [NSString stringWithFormat:@"%@ %@@%@@%lu", logMessage.threadID, file,
+                          logMessage.function, (unsigned long)logMessage.line];
 
-    [json setObject:message forKey:@"message"];
+    [json setObject:logLevel forKey:@"logLevel"];
+    [json setObject:timestamp forKey:@"timestamp"];
+    [json setObject:function forKey:@"function"];
+    [json setObject:msg forKey:@"message"];
     [json setObject:self.machineName forKey:@"hostname"];
     [json setObject:self.programName forKey:@"service"];
     [json setObject:file forKey:@"ddsource"];
