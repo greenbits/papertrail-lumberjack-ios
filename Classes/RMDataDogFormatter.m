@@ -14,12 +14,12 @@
     
     NSString *logLevel;
     switch (logMessage.flag) {
-        case DDLogFlagError     : logLevel = @"11"; break;
-        case DDLogFlagWarning   : logLevel = @"12"; break;
-        case DDLogFlagInfo      : logLevel = @"14"; break;
-        case DDLogFlagDebug     : logLevel = @"15"; break;
-        case DDLogFlagVerbose   : logLevel = @"15"; break;
-        default                 : logLevel = @"15"; break;
+        case DDLogFlagError     : logLevel = @"error"; break;
+        case DDLogFlagWarning   : logLevel = @"warning"; break;
+        case DDLogFlagInfo      : logLevel = @"info"; break;
+        case DDLogFlagDebug     : logLevel = @"debug"; break;
+        case DDLogFlagVerbose   : logLevel = @"verbose"; break;
+        default                 : logLevel = @"verbose"; break;
     }
 
     NSString *file = [[logMessage.file lastPathComponent] stringByDeletingPathExtension];
@@ -36,7 +36,7 @@
     NSString *function = [NSString stringWithFormat:@"%@ %@@%@@%lu", logMessage.threadID, file,
                           logMessage.function, (unsigned long)logMessage.line];
 
-    [json setObject:logLevel forKey:@"logLevel"];
+    [json setObject:logLevel forKey:@"status"];
     [json setObject:timestamp forKey:@"timestamp"];
     [json setObject:function forKey:@"function"];
     [json setObject:msg forKey:@"message"];
