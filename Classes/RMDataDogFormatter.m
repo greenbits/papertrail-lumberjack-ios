@@ -13,6 +13,7 @@
     self = [super init];
     if (self) {
         _tags = @{};
+        _attributes = @{};
     }
 
     return self;
@@ -40,7 +41,7 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString *timestamp = [dateFormatter stringFromDate:logMessage.timestamp];
 
-    NSMutableDictionary *json = [@{} mutableCopy];
+    NSMutableDictionary *json = [self.attributes mutableCopy];
 
     NSString *function = [NSString stringWithFormat:@"%@@%@@%lu", file,
                           logMessage.function, (unsigned long)logMessage.line];
@@ -91,6 +92,17 @@
 
 - (void)setTags:(NSDictionary *)tags {
     _tags = [tags copy];
+}
+
+- (void)addValue:(id)value forKeyToAttributes:(NSString *)key {
+    NSMutableDictionary *newAttributes = [self.attributes mutableCopy];
+    [newAttributes setValue:value forKey:key];
+
+    self.attributes = [newAttributes copy];
+}
+
+- (void)setAttributes:(NSDictionary *)attributes {
+    _attributes = [attributes copy];
 }
 
 - (void)setApiKey:(NSString *)apiKey {
