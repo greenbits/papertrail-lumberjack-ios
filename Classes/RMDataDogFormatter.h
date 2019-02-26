@@ -13,7 +13,8 @@
 @property (nonatomic, copy) NSDictionary *tags;
 @property (nonatomic, copy) NSDictionary *attributes;
 
-- (void)addValue:(id)value forKeyToTags:(NSString *)key;
-- (void)addValue:(id)value forKeyToAttributes:(NSString *)key;
+- (void)addTag:(NSString *)tag withValue:(id)value;
+- (void)addAttribute:(NSString *)attribute withValue:(id)value;
+
 
 @end

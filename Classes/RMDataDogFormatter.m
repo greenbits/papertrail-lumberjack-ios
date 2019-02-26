@@ -72,9 +72,9 @@
     return [NSString stringWithFormat:@"%@ %@", self.apiKey, log];
 }
 
-- (void)addValue:(id)value forKeyToTags:(NSString *)key {
+- (void)addTag:(NSString *)tag withValue:(id)value {
     NSMutableDictionary *newTags = [self.tags mutableCopy];
-    [newTags setValue:value forKey:key];
+    [newTags setValue:value forKey:tag];
 
     self.tags = [newTags copy];
 }
@@ -94,9 +94,9 @@
     _tags = [tags copy];
 }
 
-- (void)addValue:(id)value forKeyToAttributes:(NSString *)key {
+- (void)addAttribute:(NSString *)attribute withValue:(id)value {
     NSMutableDictionary *newAttributes = [self.attributes mutableCopy];
-    [newAttributes setValue:value forKey:key];
+    [newAttributes setValue:value forKey:attribute];
 
     self.attributes = [newAttributes copy];
 }
