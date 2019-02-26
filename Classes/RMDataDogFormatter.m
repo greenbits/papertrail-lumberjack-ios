@@ -9,6 +9,15 @@
     NSString *_machineName;
 }
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        _tags = @{};
+    }
+
+    return self;
+}
+
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
     NSString *msg = logMessage.message;
     
@@ -60,6 +69,13 @@
     }
 
     return [NSString stringWithFormat:@"%@ %@", self.apiKey, log];
+}
+
+- (void)addValue:(id)value forKeyToTags:(NSString *)key {
+    NSMutableDictionary *newTags = [self.tags mutableCopy];
+    [newTags setValue:value forKey:key];
+
+    self.tags = [newTags copy];
 }
 
 - (NSString *)tagsString {

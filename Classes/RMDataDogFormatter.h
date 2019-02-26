@@ -12,4 +12,6 @@
 @property (nonatomic, copy) NSString *machineName;
 @property (nonatomic, copy) NSDictionary *tags;
 
+- (void)addValue:(id)value forKeyToTags:(NSString *)key;
+
 @end
