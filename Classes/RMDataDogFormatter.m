@@ -46,11 +46,13 @@
     NSString *function = [NSString stringWithFormat:@"%@@%@@%lu", file,
                           logMessage.function, (unsigned long)logMessage.line];
 
+    NSString *message = [NSString stringWithFormat:@"%@ %@", logMessage.function, msg];
+
     [json setObject:logLevel forKey:@"status"];
     [json setObject:timestamp forKey:@"timestamp"];
     [json setObject:function forKey:@"function"];
     [json setObject:logMessage.threadID forKey:@"threadId"];
-    [json setObject:msg forKey:@"message"];
+    [json setObject:message forKey:@"message"];
     [json setObject:self.machineName forKey:@"hostname"];
     [json setObject:self.programName forKey:@"service"];
     [json setObject:file forKey:@"ddsource"];
