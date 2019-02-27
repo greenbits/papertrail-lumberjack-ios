@@ -9,6 +9,16 @@
     NSString *_machineName;
 }
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        _tags = @{};
+        _attributes = @{};
+    }
+
+    return self;
+}
+
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
     NSString *msg = logMessage.message;
     
@@ -31,14 +41,15 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSString *timestamp = [dateFormatter stringFromDate:logMessage.timestamp];
 
-    NSMutableDictionary *json = [@{} mutableCopy];
+    NSMutableDictionary *json = [self.attributes mutableCopy];
 
-    NSString *function = [NSString stringWithFormat:@"%@ %@@%@@%lu", logMessage.threadID, file,
+    NSString *function = [NSString stringWithFormat:@"%@@%@@%lu", file,
                           logMessage.function, (unsigned long)logMessage.line];
 
     [json setObject:logLevel forKey:@"status"];
     [json setObject:timestamp forKey:@"timestamp"];
     [json setObject:function forKey:@"function"];
+    [json setObject:logMessage.threadID forKey:@"threadId"];
     [json setObject:msg forKey:@"message"];
     [json setObject:self.machineName forKey:@"hostname"];
     [json setObject:self.programName forKey:@"service"];
@@ -61,6 +72,13 @@
     return [NSString stringWithFormat:@"%@ %@", self.apiKey, log];
 }
 
+- (void)addTag:(NSString *)tag withValue:(id)value {
+    NSMutableDictionary *newTags = [self.tags mutableCopy];
+    [newTags setValue:value forKey:tag];
+
+    self.tags = [newTags copy];
+}
+
 - (NSString *)tagsString {
     NSMutableArray *tags = [@[] mutableCopy];
 
@@ -74,6 +92,17 @@
 
 - (void)setTags:(NSDictionary *)tags {
     _tags = [tags copy];
+}
+
+- (void)addAttribute:(NSString *)attribute withValue:(id)value {
+    NSMutableDictionary *newAttributes = [self.attributes mutableCopy];
+    [newAttributes setValue:value forKey:attribute];
+
+    self.attributes = [newAttributes copy];
+}
+
+- (void)setAttributes:(NSDictionary *)attributes {
+    _attributes = [attributes copy];
 }
 
 - (void)setApiKey:(NSString *)apiKey {
