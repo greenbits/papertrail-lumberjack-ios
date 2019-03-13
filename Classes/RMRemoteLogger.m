@@ -163,6 +163,7 @@
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)error {
+    [self disconnect];
     NSLog(@"Socket did disconnect. Error: %@", error);
 }
 
